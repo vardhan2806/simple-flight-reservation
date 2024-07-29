@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Flight Reservation System</h1>
+    </header>
+
+    <main>
+        <form id="reservation-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <small class="error" id="name-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required>
+                <small class="error" id="from-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+                <small class="error" id="to-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <small class="error" id="date-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="airline">Airline:</label>
+                <select id="airline" name="airline" required>
+                    <option value="" disabled selected>Select an airline</option>
+                    <option value="Air India" data-price="100">Air India- $100</option>
+                    <option value="Indigo" data-price="200">Indigo - $200</option>
+                    <option value="Spice Jet" data-price="300">Spice Jet - $300</option>
+                    <option value="Air Asia" data-price="400">Air Asia - $400</option>
+                </select>
+                <small class="error" id="airline-error"></small>
+            </div>
+
+            <button type="submit">Reserve</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Reservation Confirmed</h2>
+            <p id="confirmation-message"></p>
+            <button id="new-reservation">Make Another Reservation</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
